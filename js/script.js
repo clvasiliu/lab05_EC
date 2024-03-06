@@ -12,6 +12,11 @@ do {
     } else {
         alert('One or both entries are invalid.');
     }
-    again = prompt('Run application again? (y or n)', 'y');
+    // prompt user to if they want to repeat, as long as input is not 
+    // valid iterate and prompt again
+    do {
+        again = prompt('Run application again? (y or n)', 'y');
+    } while (again !== 'y' && again !== 'n');
+
 } while (again === 'y');
 console.log('Application has exited.');
